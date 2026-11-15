@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root,
+.dark {
+  --bg-base: #0A0A0B;
+  --bg-panel: #141416;
+  --text-primary: #EDEDED;
+  --text-muted: #8A8A92;
+  --accent: #14B8A6;
+}
+
+html,
+body {
+  background-color: #0A0A0B;
+  color: #EDEDED;
+  font-family: var(--font-sans), "Plus Jakarta Sans", "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code,
+pre,
+.font-mono {
+  font-family: var(--font-mono), "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Precision Studio Hardware Fader Styling */
+input[type="range"]:not(.seekbar-overlay) {
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  height: 6px;
+  outline: none;
+}
+
+input[type="range"]:not(.seekbar-overlay)::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 9999px;
+  background: #EDEDED;
+  border: 2px solid #14B8A6;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+  transition: transform 0.12s ease, background-color 0.12s ease;
+}
+
+input[type="range"]:not(.seekbar-overlay)::-webkit-slider-thumb:hover {
+  transform: scale(1.14);
+  background: #14B8A6;
+}
+
+input[type="range"]:not(.seekbar-overlay)::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+  border-radius: 9999px;
+  background: #EDEDED;
+  border: 2px solid #14B8A6;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+  transition: transform 0.12s ease, background-color 0.12s ease;
+}
+
+/* Subtle Dark Studio Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(20, 184, 166, 0.45);
+}

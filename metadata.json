@@ -1,0 +1,6 @@
+{
+  "name": "Vibe — Local DSP & Mood Music Player",
+  "description": "100% client-side browser music player with local Essentia/Web Audio analysis, real-time 6-preset DSP chain, synced lyrics, mood-driven dynamic themes, and bass-reactive WebGL visuals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
